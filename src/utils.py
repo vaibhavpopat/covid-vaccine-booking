@@ -216,7 +216,7 @@ def collect_user_details(request_header):
     refresh_freq = input(
         "How often do you want to refresh the calendar (in seconds)? Default 15. Minimum 1. : "
     )
-    refresh_freq = int(refresh_freq) if refresh_freq and int(refresh_freq) >= 1 else 15
+    # refresh_freq = int(refresh_freq) if refresh_freq and int(refresh_freq) >= 1 else 15
 
     # Get search start date
     start_date = input(
@@ -579,11 +579,16 @@ def check_and_book(
             display_table(cleaned_options_for_display)
             slots_available = True
         else:
-            for i in range(refresh_freq, 0, -1):
-                msg = f"No viable options. Next update in {i} seconds.."
-                print(msg, end="\r", flush=True)
-                sys.stdout.flush()
-                time.sleep(1)
+            # for i in range(refresh_freq, 0, -1):
+            #     msg = f"No viable options. Next update in {i} seconds.."
+            #     print(msg, end="\r", flush=True)
+            #     sys.stdout.flush()
+            #     time.sleep(1)
+
+            msg = f"No viable options. Next update in "+ str(refresh_freq) +" seconds.."
+            print(msg, end="\r", flush=True)
+            sys.stdout.flush()
+            time.sleep(float(refresh_freq))
             slots_available = True
 
     except TimeoutOccurred:

@@ -1,0 +1,27 @@
+{
+    "auto_book": "yes-please",
+    "beneficiary_dtls": [
+        {
+            "age": 19,
+            "bref_id": "84974010503330",
+            "name": "Mishri Hitesh Popat",
+            "status": "Not Vaccinated",
+            "vaccine": "COVAXIN"
+        }
+    ],
+    "captcha_automation": "y",
+    "fee_type": [
+        "Paid"
+    ],
+    "location_dtls": [
+        {
+            "alert_freq": 440,
+            "pincode": "442907"
+        }
+    ],
+    "minimum_slots": 1,
+    "refresh_freq": "5",
+    "search_option": 1,
+    "start_date": 1,
+    "vaccine_type": "COVAXIN"
+}
